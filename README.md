@@ -1,5 +1,16 @@
+# Install Magento 2 Example
+
+```
+chmod a+x ./bin/magento
+mysql -uroot -e'drop database if exists magento2_example; create database magento2_example'
+./bin/magento setup:install --admin-firstname=torrey --admin-lastname=tsui --admin-email=email@email.com --admin-user=admin --admin-password=magento123 --db-name=magento2_example --db-user=root
+```
+
+If css or images files are missing, execute `php bin/magento setup:static-content:deploy` to generate them.
+
 [![Build Status](https://travis-ci.org/magento/magento2.svg?branch=master)](https://travis-ci.org/magento/magento2)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/magento/magento2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 <h2>Welcome</h2>
 Welcome to Magento 2 installation! We're glad you chose to install Magento 2, a cutting edge, feature-rich eCommerce solution that gets results.
 
